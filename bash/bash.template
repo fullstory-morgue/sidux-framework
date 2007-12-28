@@ -1,0 +1,47 @@
+#!/bin/bash -e
+
+SELF=$(basename $0)
+SFDIR="/usr/share/sidux-framework"
+
+#################################################################
+#		Synopsis					#
+#################################################################
+# bash.template: 						#
+# Author:							#
+# Date:								#
+# Purpose:							#
+# Description here						#
+#								#
+#################################################################
+
+
+#################################################################
+#		clean up on exit				#
+#################################################################
+nuke() {
+	# Finish some Tasks here
+	return 0
+}
+
+trap nuke exit
+
+[ -r /etc/default/distro ] && . /etc/default/distro
+if [ -r "$SFDIR/bash/misc.bm" ]; then
+	# This is the essential Script. Without that File The whole Script will fail.	
+	. $SFDIR/bash/misc.bm
+else 
+	echo "The File >>>$SFDIR/bash/misc.bm<<< could not be found!"
+	echo "Please make sure you have installed the Sidux-Framework correctly."
+	echo.
+	exit 1
+fi
+
+print_title "$SELF"
+
+# Add additional Includes here if required
+print_copyright
+
+# Write your Functions here
+
+# Write your Main Code here
+

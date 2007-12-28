@@ -1,0 +1,4 @@
+readme.txt		usr/share/sidux-framework
+bash/bash.template	usr/share/sidux-framework/bash
+bash/misc.bm		usr/share/sidux-framework/bash
+
