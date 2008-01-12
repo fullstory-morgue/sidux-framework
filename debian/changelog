@@ -2,6 +2,6 @@ sidux-framework (1.0.0) unstable; urgency=low
 
   [ Andreas Weber ]
   * Initial release.
+  * misc.bm enhanced. 
 
- -- Andreas Weber <andreas@it-weber.com>  Fri,  28 Dez 2007 18:02:58 +0100
-
+ -- Andreas Weber <andreas@it-weber.com>  Sat, 12 Jan 2008 18:34:48 +0100

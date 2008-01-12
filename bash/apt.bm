@@ -1,2 +1,37 @@
 # apt.bm
 # This module contains function for apt
+
+add_contrib() {
+	echo "Adding contrib"
+}
+
+print_installed_debs() {
+	dpkg -l | awk '{print $2}'
+}
+
+deb_is_installed() {
+	if [ "$(grep-dctrl -n -s Status -XP $1 /var/lib/dpkg/status)" = 'install ok installed' ]; then
+		echo 0
+	else
+		echo 1
+	fi
+}
+
+d-u() {
+	apt-get update
+	apt-get dist-upgrade
+}
+
+APTPATH="/etc/apt"
+SOURCESPATH="$APTPATH/sources.list.d"
+pushd $SOURCESPATH > /dev/null 
+APTSOURCES=$(ls -1 *.list)
+popd > /dev/null
+if [ -r "$SOURCESPATH/sidux1.list" ]; then
+	SIDUXMIRRORLIST="$SOURCESPATH/sidux.list"
+else
+	for file in ${!APTSOURCES[@]}; do
+		echo ${APTSOURCES[$file]}
+		#grep ^deb ${APTSOURCES[$file]} | grep sidux ${APTSOURCES[$file]}
+	done
+fi

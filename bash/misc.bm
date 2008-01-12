@@ -36,36 +36,36 @@ EOF
 
 print_title()
 {
-	LENGTH=$(wc -m $1)
-	LINE="--"
+	#LENGTH=$(wc -m $1)
+	LINE="--------------------------"
 	#FOR i in $LENGTH
 	#do
 	#	LINE="$LINE-"
 	#done
-	echo "${WHITE}$LINE${NORMAL}"	
-	echo "${WHITE} $1${NORMAL}"
-	echo "${WHITE}$LINE${NORMAL}"
-	echo ""
+	printf "${WHITE}$LINE${NORMAL}\n"	
+	printf "${WHITE} $1${NORMAL}\n"
+	printf "${WHITE}$LINE${NORMAL}\n"
+	printf "\n"
 }
 
 print_message()
 {
-	echo "$1"
+	printf "$1\n"
 }
 
 print_header()
 {
-	echo "${WHITE}[${NORMAL} $1 ${WHITE}]${NORMAL}"
+	printf "${WHITE}[${NORMAL} $1 ${WHITE}]${NORMAL}\n"
 }
 
 print_success()
 {
-	echo " * $1"
+	printf "${GREEN} * $1 ${NORMAL}\n"
 }
 
 print_error()
 {
-	echo "${RED} ! ERROR: ($1) $2${NORMAL}"
+	printf "${RED} ! ERROR: ($1) $2${NORMAL}\n"
 }
 
 # Global Variables
@@ -73,6 +73,7 @@ LANG=C
 LC_ALL=C
 export LANG LC_ALL
 [ -r "/etc/sidux-version" ] && SIDUXVERSION=$(cat /etc/sidux-version)
+[ -r "/etc/default/distro" ] && . /etc/default/distro
 
 
 # Reset fb color mode
