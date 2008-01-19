@@ -2,6 +2,9 @@ sidux-framework (1.0.0) unstable; urgency=low
 
   [ Andreas Weber ]
   * Initial release.
-  * misc.bm enhanced. 
+  * misc.bm enhanced.
 
- -- Andreas Weber <andreas@it-weber.com>  Sat, 12 Jan 2008 18:34:48 +0100
+  [ Stefan Lippers-Hollmann ]
+  * update to debhelper compat 6.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 19 Jan 2008 02:28:47 +0100
