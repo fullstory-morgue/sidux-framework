@@ -1,0 +1,12 @@
+# kernel.bm
+# This module contains function for apt
+
+build_module(){
+	m-a update
+	m-a a-b $1
+}
+
+install_module(){
+	m-a update
+	m-a a-i $1
+}
