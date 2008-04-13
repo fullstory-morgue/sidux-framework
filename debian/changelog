@@ -1,6 +1,7 @@
-sidux-framework (1.0.0) UNRELEASED; urgency=low
+sidux-framework (1.0.0) ORPHANED; urgency=low
 
   * NOT RELEASED YET
+  * ORPHAN PACKAGE
 
   [ Andreas Weber ]
   * Initial release.
@@ -11,4 +12,4 @@ sidux-framework (1.0.0) UNRELEASED; urgency=low
   * update to debhelper compat 6.
   * appease lintian and write (C) as © in debian/copyright.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 21 Feb 2008 01:05:45 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 14 Apr 2008 11:55:31 +0200
